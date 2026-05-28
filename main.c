@@ -15,5 +15,8 @@ int main() {
     a = criar(a, 50);
 
     pre_ordem(a);
+    printf("\n");
+    printf("Atencao! A arvore esta virada 90 graus para esquerda, ou seja, a raiz sera o numero mais a esquerda\n");
+    exibir_arvore(a, 0);
 
 }

@@ -35,4 +35,20 @@ void pre_ordem(Arvore* a){
 }
 
 
+void exibir_arvore(Arvore* a, int nivel){
+    
+    
+    if(a == NULL){
+        return;
+    }
 
+    exibir_arvore(a->dir, nivel + 1);
+
+    for(int i = 0; i < nivel; i++){
+        printf("    ");
+    }
+
+    printf("%d\n", a->No);
+
+    exibir_arvore(a->esq, nivel + 1);
+}
