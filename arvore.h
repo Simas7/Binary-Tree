@@ -17,7 +17,10 @@ typedef struct arvore
 
 Arvore* criar(Arvore* a, int valor);
 
-void pre_ordem(Arvore* a);
 void exibir_arvore(Arvore* a, int nivel);
-
+void pre_ordem(Arvore* a);
+void pos_ordem(Arvore* a);
+void em_ordem(Arvore* a);
+int menor_no(Arvore* a);
+int maior_no(Arvore* a);
 #endif

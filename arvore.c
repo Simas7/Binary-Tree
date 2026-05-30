@@ -26,6 +26,9 @@ Arvore* criar(Arvore *a, int valor){
     
 }
 
+
+//exibe a arvore em pre-ordem
+
 void pre_ordem(Arvore* a){
     if(a != NULL){
         printf("%d ", a->No);
@@ -34,6 +37,8 @@ void pre_ordem(Arvore* a){
     }
 }
 
+
+//exibe a arvore por inteiro
 
 void exibir_arvore(Arvore* a, int nivel){
     
@@ -51,4 +56,48 @@ void exibir_arvore(Arvore* a, int nivel){
     printf("%d\n", a->No);
 
     exibir_arvore(a->esq, nivel + 1);
+}
+
+//exibe a arvore em pos-ordem
+
+void pos_ordem(Arvore* a ){
+    if(a != NULL){
+        pos_ordem(a->esq);
+        pos_ordem(a->dir);
+        printf("%d ", a->No);
+    }
+}
+
+//exibe a arvore em ordem
+
+void em_ordem(Arvore* a){
+    if(a != NULL){
+        em_ordem(a->esq);
+        printf("%d ", a->No);
+        em_ordem(a->dir);
+    }
+}
+
+
+//exibe o menor no da arvore
+
+int menor_no(Arvore* a){
+    if(a->esq != NULL){
+        return menor_no(a->esq);
+    }
+    else{
+        return a->No;
+    }
+}
+
+//exibe o maior no da arvore
+
+int maior_no(Arvore* a){
+    if (a->dir != NULL){
+        return maior_no(a->dir);
+    }
+    else{
+        return a->No;        
+    }
+    
 }
